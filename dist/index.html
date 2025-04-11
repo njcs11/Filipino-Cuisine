@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Filipino Cuisine</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-white">
+
+ 
+
+    <!-- Navbar -->
+
+<nav class="bg-white shadow-md p-4">
+
+    <div class="container mx-auto flex flex-wrap justify-between items-center">
+
+        <!-- Logo + Wrapper -->
+
+        <div class="flex w-full sm:w-auto justify-between items-center">
+
+            <h1 class="text-2xl font-bold text-red-600">Filipino Cuisine</h1>
+
+            
+
+            <!-- Login button for small screens -->
+
+            <button class="sm:hidden bg-red-500 text-white px-4 py-1 ml-auto">Log In</button>
+
+        </div>
+
+
+        <!-- Search bar -->
+
+        <div class="w-full sm:w-1/2 mt-2 sm:mt-0">
+
+            <div class="relative">
+
+                <input type="text" placeholder="Find a recipe or ingredient"
+
+                       class="w-full p-2 border rounded pl-10">
+
+                <span class="absolute left-3 top-3 text-gray-500"></span>
+
+            </div>
+
+        </div>
+
+        <!-- Login button for medium and larger screens -->
+
+        <div class="hidden sm:block bg-red-500 px-4 py-1 mt-2 sm:mt-0">
+
+            <button class="text-white">Log In</button>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+    <!-- Hero Section -->
+
+       <header class="relative">
+
+        <img src="image.png" alt="Filipino Ingredients" class="w-full h-60 md:h-80 object-cover">
+    
+        <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-center px-4">
+    
+            <div class="max-w-xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold">Ingredients</h2>
+    
+                <p class="text-sm md:text-lg mt-1">Find recipes organized by meats, vegetables, and spices.</p>
+    
+                <button class="mt-6 bg-red-500 text-white px-6 py-2 rounded font-medium hover:bg-red-600">
+                    Discover More
+                </button>
+            </div>
+    
+        </div>
+    
+    </header>
+    
+
+ 
+
+    <!-- Ingredients Categories -->
+
+    <section class="container mx-auto my-6 text-center">
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+
+            <button class="px-4 py-2 bg-gray-200 rounded">Meats</button>
+
+            <button class="px-4 py-2 bg-gray-200 rounded">Vegetables</button>
+
+            <button class="px-4 py-2 bg-gray-200 rounded">Spices</button>
+
+            <button class="px-4 py-2 bg-gray-200 rounded">Rice & Noodles</button>
+
+            <button class="px-4 py-2 bg-gray-200 rounded">Seafood</button>
+
+            <button class="px-4 py-2 bg-gray-200 rounded">Fruits</button>
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Recipes Section -->
+
+    <section class="container mx-auto p-6">
+
+        <h2 class="text-3xl font-bold text-center mb-6">Popular Recipes</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+ 
+
+    <!-- Chicken Adobo -->
+<div class="bg-white p-4 rounded-lg shadow-md text-center relative">
+    <div class="w-full h-48 overflow-hidden rounded">
+        <img src="chickenadobo.png" alt="Adobo" class="transition-transform duration-300 transform hover:scale-105 w-full h-48 object-cover">
+    </div>
+    <h3 class="text-xl font-semibold mt-2">Chicken Adobo</h3>
+    <button onclick="openModal('adoboModal')" class="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+        View Ingredients
+    </button>
+</div>
+
+<!-- Sinigang -->
+<div class="bg-white p-4 rounded-lg shadow-md text-center relative">
+    <div class="w-full h-48 overflow-hidden rounded">
+        <img src="sinigang.png" alt="Sinigang" class="transition-transform duration-300 transform hover:scale-105 w-full h-48 object-cover">
+    </div>
+    <h3 class="text-xl font-semibold mt-2">Sinigang</h3>
+    <button onclick="openModal('sinigangModal')" class="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+        View Ingredients
+    </button>
+</div>
+
+<!-- Bicol Express -->
+<div class="bg-white p-4 rounded-lg shadow-md text-center relative">
+    <div class="w-full h-48 overflow-hidden rounded">
+        <img src="bicol.png" alt="Bicol Express" class="transition-transform duration-300 transform hover:scale-105 w-full h-48 object-cover">
+    </div>
+    <h3 class="text-xl font-semibold mt-2">Bicol Express</h3>
+    <button onclick="openModal('bicolModal')" class="mt-2 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">
+        View Ingredients
+    </button>
+</div>
+ 
+
+        </div>
+
+    </section>
+
+ 
+
+    <!-- Footer -->
+
+    <footer class="bg-gray-800 text-white text-center p-4 mt-6">
+
+        <p>&copy; 2025 Filipino Cuisine. All rights reserved.</p>
+
+    </footer>
+
+ 
+
+    <!-- Ingredient Modals -->
+
+    <!-- Chicken Adobo Modal -->
+<div id="adoboModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4 transition-opacity duration-300 z-50">
+    <div class="bg-white p-6 rounded-2xl shadow-xl w-full sm:w-96 text-left border-t-4 border-red-500 relative">
+        <h2 class="text-2xl font-bold text-red-600 text-center mb-4">Chicken Adobo</h2>
+        <p class="text-sm text-red-600 mt-4 font-bold">Ingredients:</p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-1">
+            <li>1 kg chicken (cut into pieces)</li>
+            <li>5 tablespoons soy sauce</li>
+            <li>3 tablespoons vinegar</li>
+            <li>5 cloves garlic (minced)</li>
+            <li>2 bay leaves</li>
+            <li>1 teaspoon whole peppercorns</li>
+            <li>1 cup water</li>
+        </ul>
+        <p class="text-sm text-red-600 mt-4 font-bold">Instructions:</p>
+        <ol class="list-decimal pl-5 text-sm text-gray-700">
+            <li>Marinate the chicken in soy sauce and garlic.</li>
+            <li>Separate the chicken from the marinade.</li>
+            <li>Pan-fry the chicken.</li>
+            <li>Pour marinade into the pot and add water.</li>
+            <li>Simmer for 20 to 25 minutes.</li>
+            <li>Season and serve.</li>
+        </ol>
+        <div class="text-center mt-6">
+            <button onclick="closeModal('adoboModal')" class="bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Sinigang Modal -->
+<div id="sinigangModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4 transition-opacity duration-300 z-50">
+    <div class="bg-white p-6 rounded-2xl shadow-xl w-full sm:w-96 text-left border-t-4 border-green-500 relative">
+        <h2 class="text-2xl font-bold text-green-600 text-center mb-4">Sinigang</h2>
+        <p class="text-sm text-green-600 mt-4 font-bold">Ingredients:</p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-1">
+            <li>1 kg pork belly or ribs</li>
+            <li>1 pack tamarind soup base or fresh tamarind (about 100g)</li>
+            <li>2 medium tomatoes (quartered)</li>
+            <li>1 medium onion (quartered)</li>
+            <li>1 small radish (sliced)</li>
+        </ul>
+        <p class="text-sm text-green-600 mt-4 font-bold">Instructions:</p>
+        <ol class="list-decimal pl-5 text-sm text-gray-700">
+            <li>In a large soup pot heat the vegetable oil over medium heat.</li>
+            <li>Stir in the onion. Cook, stirring frequently until the onion begins to be translucent (approx. 2-4 minutes).</li>
+            <li>Stir in tomatoes, pork and Season the onion with salt.</li>
+            <li>Pour in chicken broth and tamarind soup base. Mix to combine.</li>
+            <li>Simmer until pork tender and cooked through (approx. 30-40 minutes).</li>
+            <li>Stir in green beans, spinach, and sliced okra. Cook until tender and Serve.</li>
+        </ol>
+        <div class="text-center mt-6">
+            <button onclick="closeModal('sinigangModal')" class="bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Bicol Modal -->
+<div id="bicolModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center p-4 transition-opacity duration-300 z-50">
+    <div class="bg-white p-6 rounded-2xl shadow-xl w-full sm:w-96 text-left border-t-4 border-yellow-500 relative">
+        <h2 class="text-2xl font-bold text-yellow-600 text-center mb-4">Bicol Express</h2>
+        <p class="text-sm text-yellow-600 mt-4 font-bold">Ingredients:</p>
+        <ul class="list-disc pl-6 text-gray-700 space-y-1">
+            <li> 2 lbs. pork belly sliced into strips</li>
+            <li> 2 cups coconut milk</li>
+            <li> 1/4 cup shrimp paste or salted Krill</li>
+            <li> 5 cloves garlic crushed and 1 piece onion chopped</li>
+            <li> 5 pieces Thai chili pepper chopped</li>
+            <li> 8 grams Maggi Magic Sarap</li>
+        </ul>
+        <p class="text-sm text-yellow-600 mt-4 font-bold">Instructions:</p>
+        <ol class="list-decimal pl-5 text-sm text-gray-700">
+            <li>Combine coconut milk, onion, ginger, garlic, and pork in a cooking pot. </li>
+            <li>Stir. Turn the heat on and let the coconut milk boil. </li>
+            <li>Cover the pot and continue to boil in medium heat until the liquid reduces to half.</li>
+            <li>Stir the mixture every 7 minutes to prevent lumps from forming.</li>
+            <li>Add balaw or bagoong alamang, chili peppers, coconut cream, and Knorr pork cube.</li>
+            <li>Transfer to a serving bowl. Serve. Share and enjoy!</li>
+        </ol>
+        <div class="text-center mt-6">
+            <button onclick="closeModal('bicolModal')" class="bg-yellow-500 text-white px-6 py-2 rounded-full hover:bg-yellow-600 transition">Close</button>
+        </div>
+    </div>
+</div>
+
+ 
+
+    <!-- JavaScript -->
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove("hidden");
+        }
+    
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add("hidden");
+        }
+    </script>
+
+ 
+
+</body>
+
+</html>
